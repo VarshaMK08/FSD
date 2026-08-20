@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Storage Containers</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: white;
+            padding: 40px;
+        }
+
+        /* Main container */
+        .product-container {
+            width: 600px;
+            margin: auto;
+        }
+
+        /* Product Image */
+        .image-section {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .product-image {
+            width: 100%;
+            max-width: 420px;
+            height: 420px;
+            object-fit: contain;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        /* Product Details */
+        .details-section {
+            width: 100%;
+            padding-top: 10px;
+        }
+
+        .product-title {
+            font-size: 26px;
+            line-height: 1.3;
+            font-weight: 500;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .store {
+            color: #007185;
+            font-size: 15px;
+            margin-bottom: 12px;
+        }
+
+        .rating-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .rating {
+            background-color: #007185;
+            color: white;
+            padding: 5px 9px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .stars {
+            color: #f08804;
+            font-size: 18px;
+        }
+
+        .reviews {
+            color: #007185;
+            font-size: 14px;
+        }
+
+        .bought {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 15px 0;
+        }
+
+        .deal {
+            display: inline-block;
+            background-color: #cc0c39;
+            color: white;
+            padding: 7px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 8px;
+        }
+
+        .discount {
+            color: #cc0c39;
+            font-size: 30px;
+        }
+
+        .price {
+            font-size: 34px;
+            color: #222;
+            font-weight: 500;
+        }
+
+        .currency {
+            font-size: 20px;
+            vertical-align: top;
+        }
+
+        .mrp {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .tax {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .coupon {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .coupon-box {
+            border: 1px solid #aaa;
+            padding: 7px 12px;
+            border-radius: 4px;
+            color: #555;
+            font-size: 13px;
+        }
+
+        .coupon-text {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .button {
+            margin-top: 25px;
+            padding: 12px 30px;
+            background-color: #ffd814;
+            border: 1px solid #fcd200;
+            border-radius: 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #f7ca00;
+        }
+
+        /* Mobile */
+        @media (max-width: 650px) {
+            body {
+                padding: 20px;
+            }
+
+            .product-container {
+                width: 100%;
+            }
+
+            .product-image {
+                height: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-container">
+
+        <!-- Product Image -->
+        <div class="image-section">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBrWnn56hS-sUZYG9X5hjG9r9sXVreOhG9SQK_13Gg5g&s"
+                alt="Metal Kitchen Storage Containers" class="product-image">
+        </div>
+
+        <!-- Product Information -->
+        <div class="details-section">
+
+            <h1 class="product-title">
+                Metallure Home Round Classic Kitchen
+                Storage Containers | Set of 3 Metal Jars
+                With Lid | Potato, Onion & Garlic
+                (Food Safe) (Light Green)
+            </h1>
+
+            <div class="store">
+                Visit the Metallure Home Store
+            </div>
+
+            <div class="rating-row">
+                <span class="rating">4.6 ★</span>
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(162)</span>
+            </div>
+
+            <div class="bought">
+                200+ bought in past month
+            </div>
+
+            <hr>
+
+            <span class="deal">
+                Limited time deal
+            </span>
+
+            <div class="price-row">
+                <span class="discount">-56%</span>
+
+                <span class="price">
+                    <span class="currency">₹</span>999
+                </span>
+            </div>
+
+            <div class="mrp">
+                M.R.P.: <del>₹2,249</del>
+            </div>
+
+            <div class="tax">
+                Inclusive of all taxes
+            </div>
+
+            <div class="coupon">
+
+                <span class="coupon-box">
+                    Coupon
+                </span>
+
+                <input type="checkbox">
+
+                <span class="coupon-text">
+                    Apply 2% coupon
+                </span>
+
+                <a href="#" style="color:#007185;">
+                    Terms
+                </a>
+
+                <a href="#" style="color:#007185;">
+                    Shop items
+                </a>
+
+            </div>
+
+            <button class="button">
+                Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
