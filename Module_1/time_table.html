@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Time Table</title>
+    <style>
+        table {
+            width: auto;
+            border-collapse: collapse;
+            margin: auto;
+            padding: 10px
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgb(200, 237, 249)
+        }
+
+
+        h2 {
+            text-align: center;
+        }
+
+        .break {
+            background-color: lightyellow;
+            font-weight: bold;
+        }
+
+        .lunch {
+            background-color: rgb(185, 250, 185);
+            font-weight: bold;
+        }
+
+        tr:nth-child(even) {
+            background: color #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Time Table</h2>
+
+    <table>
+
+        <caption>
+            <h3>CSE 5th sem D section TimeTable</h3>
+        </caption>
+        <thead>
+            <tr>
+                <th>Days</th>
+                <th>9-10</th>
+                <th>10-11</th>
+                <th>11-11:30</th>
+                <th>11:30-12:30</th>
+                <th>12:30-1:30</th>
+                <th>1:30-2:30</th>
+                <th>2:30-3:30</th>
+                <th>3:30-4:30</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Mon</td>
+                <td>SEPM</td>
+                <td>RM</td>
+                <td rowspan="5" class="break">Break</td>
+                <td>ATC</td>
+                <td>CN</td>
+                <td rowspan="5" class="lunch">Lunch</td>
+                <td colspan="2">LAB</td>
+            </tr>
+
+            <tr>
+                <td>Tue</td>
+                <td>CN</td>
+                <td>SEPM</td>
+                <td>FSD</td>
+                <td>AI</td>
+                <td colspan="2">ATC Tutorial</td>
+            </tr>
+
+            <tr>
+                <td>Wed</td>
+                <td>RM</td>
+                <td>FSD</td>
+                <td>AI</td>
+                <td>CN</td>
+                <td>ATC</td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Thu</td>
+                <td colspan="2">LAB</td>
+                <td>CN</td>
+                <td>FSD</td>
+                <td colspan="2">Procter Interaction</td>
+            </tr>
+
+            <tr>
+                <td>Fri</td>
+                <td>AI</td>
+                <td>ATC</td>
+                <td colspan="2">LAB</td>
+                <td colspan="2">Project Progress Review</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
