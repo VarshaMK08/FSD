@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Information Form</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            border: 2px solid black;
+            padding: 20px;
+            background-color: white;
+            width: 400px;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        select,
+        textarea {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .buttons {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+        <h2>User Information Form</h2>
+
+        <form>
+            <table>
+                <tr>
+                    <td><label for="name">Name</label></td>
+                    <td><input type="text" id="name" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="email">Email</label></td>
+                    <td><input type="email" id="email" required></td>
+                </tr>
+
+                <tr>
+                    <td><label for="age">Age</label></td>
+                    <td><input type="number" id="age"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="country">Country</label></td>
+                    <td>
+                        <select id="country">
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" id="password"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="resume">Resume</label></td>
+                    <td>
+                        <input type="file" id="resume" accept="application/pdf,.pdf">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Hobbies</td>
+                    <td>
+                        <input type="checkbox" id="cricket">
+                        <label for="cricket">Cricket</label>
+
+                        <input type="checkbox" id="football">
+                        <label for="football">Football</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" id="male" name="gender">
+                        <label for="male">Male</label>
+
+                        <input type="radio" id="female" name="gender">
+                        <label for="female">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td>
+                        <select id="city">
+                            <option>--Choose City--</option>
+                            <option>Mysore</option>
+                            <option>Bangalore</option>
+                            <option>Mangalore</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="address">Address</label>
+                    </td>
+                    <td>
+                        <textarea id="address" rows="4"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="buttons">
+                        <input type="button" value="Submit" onclick="userFunction()">
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        function userFunction() {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var age = document.getElementById("age").value;
+            var country = document.getElementById("country").value;
+            var password = document.getElementById("password").value;
+            var city = document.getElementById("city").value;
+            var address = document.getElementById("address").value;
+
+            var hobbies = "";
+
+            if (document.getElementById("cricket").checked) {
+                hobbies += "Cricket ";
+            }
+
+            if (document.getElementById("football").checked) {
+                hobbies += "Football";
+            }
+
+            var gender = "";
+
+            if (document.getElementById("male").checked) {
+                gender = "Male";
+            }
+
+            if (document.getElementById("female").checked) {
+                gender = "Female";
+            }
+
+            alert(
+                "Name: " + name +
+                "\nEmail: " + email +
+                "\nAge: " + age +
+                "\nCountry: " + country +
+                "\nPassword: " + password +
+                "\nHobbies: " + hobbies +
+                "\nGender: " + gender +
+                "\nCity: " + city +
+                "\nAddress: " + address
+            );
+        }
+    </script>
+</body>
+
+</html>
