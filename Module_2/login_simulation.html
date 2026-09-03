@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="login()">login</button>
+
+    <script>
+        function login() {
+
+            var name = prompt("Enter the name: ");
+            var password = prompt("Enter the password: ");
+
+            if (name == "Varsha" && password == 1234) {
+                alert("Successful login");
+            }
+            else {
+                var tryAgain = prompt("Invalid credentials. Do you want to try again? (yes/no)");
+                if (tryAgain == "yes") {
+                    login();
+                }
+                else {
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
