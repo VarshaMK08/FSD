@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button onclick="convert()">Convert Temperature</button>
+
+    <script>
+        function convert() {
+            alert("Welcome to the Temperature Converter!");
+            var cel = prompt("Enter the temperature in Celsius");
+            var fah = cel * 9 / 5 + 32;
+            if (isNaN(cel) || cel == null || cel.trim() == "") {
+                alert("Please enter a valid number.");
+            }
+            else {
+                alert("Fahrenheit: " + fah);
+            }
+        }
+    </script>
+</body>
+
+</html>
