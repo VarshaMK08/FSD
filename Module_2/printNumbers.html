@@ -1,0 +1,36 @@
+<!-- Write a JavaScript program to accept a number N from the user and print numbers from 1 to N using a while loop.
+
+Example:
+
+Input: 5
+Output: 1 2 3 4 5 -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Print the Natural Numbers</h2>
+    <form>
+        <label for="number">Enter thr Number</label>
+        <input type="number" id="number" name="number" required>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+
+    <p id="num"></p>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function (event) {
+            event.preventDefault();
+            var num = document.getElementById("number").value;
+            var i = 0;
+            while (num > 0) {
+                i++;
+                document.getElementById("num").innerHTML += i + " ";
+                num--;
+            }
+
+        })
+    </script>
+</body>
+
+</html>
