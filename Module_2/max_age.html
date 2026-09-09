@@ -1,0 +1,26 @@
+<!-- create an array of ages , filter only people who are 18 or older and use reduce() to find the max age -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form>
+        <label for="ages">Enter ages (comma-separated):</label>
+        <input type="text" id="ages" name="ages" required>
+        <input type="submit" value="Submit">
+    </form>
+    <p id="maxAgeOutput"></p>
+
+    <script>
+        document.querySelector("form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            const input = document.getElementById("ages").value;
+            const ages = input.split(',').map(value => parseInt(value.trim()));
+            const filteredAges = ages.filter(age => age >= 18);
+            const maxAge = filteredAges.reduce((max, current) => current > max ? current : max, 0);
+            document.getElementById("maxAgeOutput").textContent = "Maximum age (18 or older): " + maxAge;
+        });
+    </script>
+</body>
+
+</html>
