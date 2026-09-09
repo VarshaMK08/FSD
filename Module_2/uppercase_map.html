@@ -1,0 +1,31 @@
+<!-- create an array and convert all elements to uppercase -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Convert Array Elements to Uppercase</h2>
+    <form>
+        <label for="uppercaseInput">Enter elements of array:</label>
+        <input type="text" id="uppercaseInput" name="uppercaseInput" required>
+        <input type="submit" value="Submit" id="submit">
+
+    </form>
+    <p id="uppercaseOutput"></p>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function (event) {
+            event.preventDefault();
+            var input = document.getElementById("uppercaseInput").value;
+            var strArray = input.split(',').map(function (value) {
+                return value.trim();
+            });
+            var uppercasedArray = strArray.map(function (str) {
+                return str.toUpperCase();
+            });
+            document.getElementById("uppercaseOutput").textContent = "Uppercase Array: [" + uppercasedArray.join(', ') + "]";
+        });
+    </script>
+</body>
+
+</html>
