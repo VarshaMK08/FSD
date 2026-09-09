@@ -1,0 +1,18 @@
+<!-- Use filter to get only the odd numbers from an array -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Filter the Odd numbers</h2>
+    <p>Original Array:[1, 2, 3, 4, 5]</p>
+    <p id="oddArray"></p>
+
+    <script>
+        const num = [1, 2, 3, 4, 5];
+        const oddnum = num.filter(n => n % 2 !== 0);
+        document.getElementById("oddArray").innerHTML = "Odd Array: [" + oddnum + "]";
+    </script>
+</body>
+
+</html>
