@@ -1,0 +1,28 @@
+<!-- Use reduce to calculate the sum of array -->
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Sum of Array</h2>
+    <form>
+        <label for="sumArrayInput">Enter elements of array:</label>
+        <input type="text" id="sumArrayInput" name="sumArrayInput" required>
+        <input type="submit" value="Submit" id="submit">
+    </form>
+    <p id="sumArrayOutput"></p>
+
+    <script>
+        document.getElementById("submit").addEventListener("click", function (event) {
+            event.preventDefault();
+            var input = document.getElementById("sumArrayInput").value;
+            var numArray = input.split(',').map(function (value) {
+                return Number(value.trim());
+            });
+            var sum = numArray.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+            document.getElementById("sumArrayOutput").textContent = "Sum of Array: " + sum;
+        });
+    </script>
+</body>
+
+</html>
