@@ -1,0 +1,29 @@
+<!-- add "h1" tag below para 1 with the text "FSD" -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div="theDiv">
+        <h1>Hello !</h1>
+        <p id="one">This is paragraph 1</p>
+        <p id="two">This is paragraph 2</p>
+        <p id="three">This is paragraph 3</p>
+        <button onclick="inst(document.getElementById('two'))">Click to insert before p2</button>
+        </div>
+
+        <script>
+            function inst(element) {
+                var nh = document.createElement("h1");
+                var context = document.createTextNode("FSD");
+                nh.appendChild(context);
+                element.parentNode.insertBefore(nh, element);
+            }
+        </script>
+</body>
+
+</html>
