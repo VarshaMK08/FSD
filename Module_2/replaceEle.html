@@ -1,0 +1,29 @@
+<!-- Replace the paragraph 2 with "Welcome to FSD class" -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <div="theDiv">
+        <h1>Hello !</h1>
+        <p id="one">This is paragraph 1</p>
+        <p id="two">This is paragraph 2</p>
+        <p id="three">This is paragraph 3</p>
+        <button onclick="repl(document.getElementById('two'))">Click to insert before p2</button>
+        </div>
+
+        <script>
+            function repl(element) {
+                var np = document.createElement("p");
+                var context = document.createTextNode("Welcome to FSD class");
+                np.appendChild(context);
+                element.parentNode.replaceChild(np, element);
+            }
+        </script>
+</body>
+
+</html>
