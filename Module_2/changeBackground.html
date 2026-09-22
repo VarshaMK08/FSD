@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button onclick="changeColor('red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('blue')">Blue</button>
+
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <input type="text" id="taskInput" placeholder="Enter task">
+    <button onclick="addTask()">Add Task</button>
+
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+
+            let task = document.getElementById("taskInput").value;
+
+            let li = document.createElement("li");
+            li.innerHTML = task;
+
+            let delBtn = document.createElement("button");
+            delBtn.innerHTML = "Delete";
+
+            delBtn.onclick = function () {
+                li.remove();
+            };
+
+            li.appendChild(delBtn);
+
+            document.getElementById("taskList").appendChild(li);
+
+            document.getElementById("taskInput").value = "";
+        }
+    </script>
+
+</body>
+
+</html>
