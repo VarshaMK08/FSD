@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Number</title>
+</head>
+
+<body>
+    <button onclick="number()">Button</button>
+
+    <script>
+        function number() {
+
+            let num = prompt("Enter the number");
+
+            if (num == 0) {
+                document.write("Zero<br>");
+            }
+            else if (num > 0) {
+                document.write("Positive<br>");
+            }
+            else {
+                document.write("negative<br>");
+            }
+
+            if (num % 2 == 0) {
+                document.write("Even<br>");
+            }
+            else {
+                document.write("Odd<br>");
+            }
+
+            document.write("Square : " + (num * num) + "<br>");
+            document.write("Cube : " + (num * num * num) + "<br>");
+        }
+    </script>
+</body>
+
+</html>
