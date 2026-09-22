@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2 id=count>0</h2>
+    <button onclick="funIncre()">Increment Button</button>
+    <button onclick="funDecre()">Decrement Button</button>
+    <button onclick="funReset()">Reset Button</button>
+
+    <script>
+        let count = 0;
+
+        function funIncre() {
+            count++
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function funDecre() {
+            count--
+            document.getElementById("count").innerHTML = count;
+        }
+
+        function funReset() {
+            count = 0;
+            document.getElementById("count").innerHTML = count;
+        }
+    </script>
+</body>
+
+</html>
