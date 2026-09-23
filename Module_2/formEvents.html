@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <form id="userForm">
+        <h1>Event Handling</h1>
+
+        <label for="name">Enter the name</label>
+        <input type="text" id="name">
+        <br><br>
+        <label for="email">Enter the email</label>
+        <input type="email" id="email">
+        <p id="status"></p>
+    </form>
+
+    <script>
+        const form = document.getElementById('userForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const status = document.getElementById('status');
+
+        nameInput.addEventListener('focus', function () {
+            status.textContent = "Name input is focused";
+            status.style.color = 'blue';
+        })
+
+        emailInput.addEventListener('focus', function () {
+            status.textContent = "Email input is focused";
+            status.style.color = 'blue';
+        })
+
+        nameInput.addEventListener('blur', function () {
+            status.textContent = "Status is not focused";
+            status.style.color = 'red';
+        })
+        emailInput.addEventListener('blur', function () {
+            status.textContent = "Status is not focused";
+            status.style.color = 'red';
+        })
+
+    </script>
+</body>
+
+</html>
